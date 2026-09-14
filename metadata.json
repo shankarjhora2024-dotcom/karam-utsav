@@ -1,0 +1,6 @@
+{
+  "name": "Karam Utsav",
+  "description": "Celebrating Nature, Culture & Tradition — Discover the cultural heritage, traditions, and stories of Karam Utsav in Assam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

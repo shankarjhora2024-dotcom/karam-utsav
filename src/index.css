@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #19241e;
+    background-color: #faf7f2;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-serif-body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Subtle handloom / tribal woven texture backdrop */
+.adivasi-pattern {
+  background-color: #faf7f2;
+  background-image: radial-gradient(#1f4e3518 1px, transparent 1px), radial-gradient(#b4530915 1px, #faf7f2 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Authentic botanical Assam tea garden & earthen palette gradients */
+.karam-gradient {
+  background: linear-gradient(145deg, #123321 0%, #1a492f 55%, #153a25 100%);
+}
+
+.terracotta-gradient {
+  background: linear-gradient(135deg, #9a3412 0%, #b45309 60%, #7c2d12 100%);
+}
+
+.earth-gradient {
+  background: linear-gradient(180deg, #fcfaf6 0%, #f5eee3 100%);
+}
+
+/* Card hover with natural tactile lift */
+.card-hover {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -10px rgba(21, 51, 33, 0.14);
+}
+
+/* Custom refined scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ece0;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5a48f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8e7d69;
+}
