@@ -1,6 +1,7 @@
 node_modules/
 build/
-dist/
+# dist is included so Hostinger Git deployment has the compiled JS/HTML
+# dist/
 coverage/
 .DS_Store
 *.log
