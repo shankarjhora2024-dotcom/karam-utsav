@@ -1,22 +1,2007 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karam Utsav — Celebrating Nature, Culture & Tradition</title>
-    <meta name="description" content="Discover the cultural heritage, traditions, and stories of Karam Utsav in Assam." />
-    <meta name="keywords" content="Karam Utsav, Karam Puja Assam, Karam Festival, Tea Tribes of Assam, Adivasi Culture Assam, Karam Puja Tradition, Karam Songs and Dance, Assam Cultural Heritage, Karam Tree Festival" />
-    <meta property="og:title" content="Karam Utsav — Celebrating Nature, Culture & Tradition" />
-    <meta property="og:description" content="Discover the cultural heritage, traditions, and stories of Karam Utsav in Assam." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-[#faf7f2] text-[#19241e] antialiased selection:bg-[#2d6a4f] selection:text-amber-100">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karam Utsav — Celebrating Nature, Culture & Tradition</title>
+  <meta name="description" content="Discover the cultural heritage, traditions, rituals, Jhumur dance, and living spirit of Karam Utsav in Assam." />
+  <meta name="keywords" content="Karam Utsav, Karam Puja Assam, Karam Festival, Tea Tribes of Assam, Adivasi Culture Assam, Karam Puja Tradition, Karam Songs, Jhumur Dance, Assam Cultural Heritage, Karam Tree Festival" />
+  <meta property="og:title" content="Karam Utsav — Celebrating Nature, Culture & Tradition" />
+  <meta property="og:description" content="Discover the cultural heritage, traditions, rituals, Jhumur dance, and living spirit of Karam Utsav in Assam." />
+  <meta property="og:type" content="website" />
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset & Base Variables */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-warm: #faf7f2;
+      --bg-card: #ffffff;
+      --forest-dark: #19241e;
+      --forest-green: #2d6a4f;
+      --forest-light: #40916c;
+      --forest-emerald: #52b788;
+      --ochre-amber: #d97706;
+      --ochre-gold: #f59e0b;
+      --ochre-light: #fef3c7;
+      --terracotta: #b45309;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --text-light: #9ca3af;
+      --border-color: #e5e7eb;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-warm);
+      color: var(--forest-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, textarea {
+      font-family: inherit;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    /* Top Cultural Notice */
+    .notice-bar {
+      background: linear-gradient(90deg, #19241e, #2d6a4f);
+      color: #fef3c7;
+      font-size: 0.85rem;
+      padding: 0.6rem 1rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* Navigation Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #ede8df;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.5rem;
+    }
+
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      background: linear-gradient(135deg, #2d6a4f, #19241e);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f59e0b;
+      box-shadow: 0 4px 10px rgba(45, 106, 79, 0.25);
+    }
+
+    .logo-text h1 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #19241e;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ochre-amber);
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+      padding: 0.5rem 0.2rem;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--forest-green);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--forest-green);
+      border-radius: 2px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-nav-ebook {
+      background: #2d6a4f;
+      color: #ffffff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-nav-ebook:hover {
+      background: #1b4332;
+      transform: translateY(-1px);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--forest-dark);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(180deg, #faf7f2 0%, #f4eee1 100%);
+      padding: 4.5rem 0 3.5rem;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      border: 1px solid #fde68a;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 3.25rem;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #19241e;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: #4b5563;
+      margin-bottom: 2rem;
+      max-width: 36rem;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary {
+      background: #2d6a4f;
+      color: #ffffff;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(45, 106, 79, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: #1b4332;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #19241e;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid #d1d5db;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #f9fafb;
+      border-color: #9ca3af;
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.75rem;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #2d6a4f;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .hero-image-card {
+      position: relative;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -10px rgba(25, 36, 30, 0.25);
+      border: 4px solid #ffffff;
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-card-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(180deg, transparent 0%, rgba(25, 36, 30, 0.95) 100%);
+      color: #ffffff;
+    }
+
+    .hero-card-caption h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-card-caption p {
+      font-size: 0.85rem;
+      color: #e5e7eb;
+    }
+
+    /* Section Typography */
+    .section-header {
+      text-align: center;
+      max-width: 44rem;
+      margin: 0 auto 3rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ochre-amber);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #19241e;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: #6b7280;
+    }
+
+    /* Feature Grid / Core Highlights */
+    .features-section {
+      padding: 5rem 0;
+      background: #ffffff;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: #faf7f2;
+      border: 1px solid #ede8df;
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+      border-color: #d8cebd;
+    }
+
+    .feature-icon-wrapper {
+      width: 3.5rem;
+      height: 3.5rem;
+      background: #fef3c7;
+      color: #b45309;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .feature-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #19241e;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-text {
+      font-size: 0.95rem;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 5rem 0;
+      background: #faf7f2;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-image-stack {
+      position: relative;
+    }
+
+    .about-img-main {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 1rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-badge-card {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: #ffffff;
+      padding: 1.25rem 1.75rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      border-left: 4px solid var(--forest-green);
+    }
+
+    .about-badge-title {
+      font-weight: 700;
+      color: #19241e;
+      font-size: 1.1rem;
+    }
+
+    .about-badge-sub {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .about-text-content h3 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #19241e;
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .about-text-content p {
+      font-size: 1.05rem;
+      color: #4b5563;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .about-list {
+      list-style: none;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    .about-list svg {
+      color: var(--forest-green);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    /* Rituals & Traditions */
+    .rituals-section {
+      padding: 5rem 0;
+      background: #ffffff;
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .timeline-card {
+      background: #faf7f2;
+      border: 1px solid #ede8df;
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .step-number {
+      width: 2.25rem;
+      height: 2.25rem;
+      background: #2d6a4f;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .timeline-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #19241e;
+      margin-bottom: 0.6rem;
+    }
+
+    .timeline-text {
+      font-size: 0.9rem;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    /* Interactive Gallery */
+    .gallery-section {
+      padding: 5rem 0;
+      background: #faf7f2;
+    }
+
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      color: #4b5563;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #2d6a4f;
+      color: #ffffff;
+      border-color: #2d6a4f;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .gallery-item {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid #ede8df;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-thumb {
+      height: 230px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-thumb img {
+      transform: scale(1.05);
+    }
+
+    .gallery-tag {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background: rgba(25, 36, 30, 0.85);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .gallery-info {
+      padding: 1.25rem;
+    }
+
+    .gallery-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #19241e;
+      margin-bottom: 0.4rem;
+    }
+
+    .gallery-caption {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 0.75rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .gallery-meta {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* Ebook Section */
+    .ebook-section {
+      padding: 5.5rem 0;
+      background: linear-gradient(135deg, #19241e 0%, #101813 100%);
+      color: #ffffff;
+      position: relative;
+    }
+
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .ebook-cover-wrapper {
+      text-align: center;
+      position: relative;
+    }
+
+    .ebook-book-visual {
+      display: inline-block;
+      width: 280px;
+      height: 410px;
+      background: linear-gradient(145deg, #2d6a4f 0%, #153225 100%);
+      border-radius: 0.5rem 1rem 1rem 0.5rem;
+      box-shadow: -8px 12px 30px rgba(0, 0, 0, 0.6), inset 5px 0 10px rgba(255, 255, 255, 0.15);
+      border: 2px solid #3f926e;
+      padding: 2rem 1.5rem;
+      position: relative;
+      text-align: center;
+      transition: transform 0.4s ease;
+    }
+
+    .ebook-book-visual:hover {
+      transform: rotateY(-8deg) scale(1.02);
+    }
+
+    .ebook-book-visual::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .book-title-assamese {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: #fef3c7;
+      font-weight: 700;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .book-title-sub {
+      font-size: 0.85rem;
+      color: #a7f3d0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+    }
+
+    .book-emblem {
+      width: 5rem;
+      height: 5rem;
+      margin: 1.5rem auto;
+      border: 2px dashed #f59e0b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f59e0b;
+    }
+
+    .book-footer-note {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      font-size: 0.75rem;
+      color: #cbd5e1;
+    }
+
+    .ebook-details h3 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fef3c7;
+      margin-bottom: 0.5rem;
+    }
+
+    .ebook-subtitle {
+      font-size: 1.15rem;
+      color: #a7f3d0;
+      margin-bottom: 1.5rem;
+    }
+
+    .ebook-desc {
+      font-size: 1rem;
+      color: #cbd5e1;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .ebook-meta-table {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+    }
+
+    .meta-val {
+      font-size: 0.95rem;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .pricing-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .price-main {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #f59e0b;
+    }
+
+    .price-mrp {
+      font-size: 1.1rem;
+      text-decoration: line-through;
+      color: #94a3b8;
+    }
+
+    .discount-pill {
+      background: #ef4444;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+    }
+
+    .ebook-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn-buy-amazon {
+      background: #f59e0b;
+      color: #19241e;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-buy-amazon:hover {
+      background: #d97706;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-preview-book {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 0.85rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-preview-book:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 5rem 0;
+      background: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info-card {
+      background: #faf7f2;
+      border: 1px solid #ede8df;
+      border-radius: 1rem;
+      padding: 2.5rem;
+    }
+
+    .contact-org-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #19241e;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-org-sub {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: #e7f5ed;
+      color: #2d6a4f;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6b7280;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-val {
+      font-size: 1rem;
+      color: #19241e;
+      font-weight: 600;
+    }
+
+    .contact-val a:hover {
+      color: var(--forest-green);
+      text-decoration: underline;
+    }
+
+    .contact-form-card {
+      background: #ffffff;
+      border: 1px solid #ede8df;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-size: 0.95rem;
+      color: #19241e;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: #2d6a4f;
+      box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+    }
+
+    /* Footer */
+    .footer {
+      background: #19241e;
+      color: #e5e7eb;
+      padding: 4rem 0 2rem;
+      border-top: 1px solid #2d3e34;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .social-btn {
+      width: 2.4rem;
+      height: 2.4rem;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      transition: all 0.2s;
+    }
+
+    .social-btn:hover {
+      background: #2d6a4f;
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    /* Modals & Popups */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: 1rem;
+      width: 100%;
+      max-width: 620px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      position: relative;
+      animation: scaleUp 0.25s ease-out;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #f3f4f6;
+      border: none;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.25rem;
+      color: #4b5563;
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .modal-header {
+      padding: 1.75rem 2rem 1.25rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .modal-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #19241e;
+    }
+
+    .modal-body {
+      padding: 1.75rem 2rem;
+    }
+
+    .modal-footer {
+      padding: 1.25rem 2rem;
+      background: #faf7f2;
+      border-top: 1px solid #ede8df;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    /* Lightbox Gallery Modal */
+    .lightbox-box {
+      max-width: 840px;
+      padding: 0;
+      background: #111827;
+      color: #ffffff;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+
+    .lightbox-box .modal-close {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    .lightbox-img-wrap {
+      width: 100%;
+      max-height: 520px;
+      background: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-img-wrap img {
+      max-width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+    }
+
+    .lightbox-caption-wrap {
+      padding: 1.5rem 2rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleUp {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .about-grid,
+      .ebook-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .features-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .btn-nav-ebook {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .nav-links.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 1.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .features-grid,
+      .gallery-grid,
+      .timeline-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Cultural Notice Bar -->
+  <aside class="notice-bar" aria-label="Cultural Notice">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+    <span>Traditions, dates, and folk practices of Karam Utsav may vary gracefully among communities and regions across Assam.</span>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo-brand">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="logo-text">
+          <h1>Karam Utsav</h1>
+          <span>Celebrating Nature & Heritage</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#rituals">Rituals</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#ebook">Ebook</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-nav-ebook" onclick="openEbookModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Get Ebook (₹49)</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" onclick="toggleMobileNav()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">
+          <span>🌿 Sacred Harvest & Agrarian Celebration</span>
+        </div>
+        <h2 class="hero-title">Discover the Living Spirit of Karam Utsav in Assam</h2>
+        <p class="hero-subtitle">
+          Join thousands of tea tribe families and indigenous communities across Assam in honoring the sacred Karam tree, welcoming harvest fertility, and dancing to the hypnotic rhythms of the Mandar.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#about" class="btn-primary">
+            <span>Explore Traditions</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button class="btn-secondary" onclick="openEbookModal()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Cultural Ebook</span>
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">Bhado 11</div>
+            <div class="stat-label">Shukla Paksha Festival</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">7-9 Days</div>
+            <div class="stat-label">Jawa Germination Rituals</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Jhumur</div>
+            <div class="stat-label">Centuries-Old Folk Dance</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-card">
+        <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1000&q=80" alt="Sacred Karam Tree Branches in nature" />
+        <div class="hero-card-caption">
+          <h4>Veneration of the Karam Tree</h4>
+          <p>Symbolizing life, prosperity, and the unbreakable bond between humans and mother earth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Cultural Highlights -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Cultural Pillars</div>
+        <h3 class="section-title">Essential Facets of Karam Parav</h3>
+        <p class="section-desc">From agricultural blessings to nightlong choral ballads, Karam Utsav unites generations in joyous celebration.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22v-7"/><path d="M9 9c0-3.5 1.5-5 3-5s3 1.5 3 5a6 6 0 0 1-6 0Z"/><path d="M5.5 13a4.5 4.5 0 0 0 6.5 2"/><path d="M18.5 13a4.5 4.5 0 0 1-6.5 2"/></svg>
+          </div>
+          <h4 class="feature-title">Worship of Nature</h4>
+          <p class="feature-text">Two sacred Karam boughs (Daal) are carefully harvested from the forest, brought to the village square (Akhra), and established with rituals to bless livestock, crops, and families.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h4 class="feature-title">The Jawa Awakening</h4>
+          <p class="feature-text">Maidens (Karamthin) plant and nurture five to seven types of grains in baskets for 7 to 9 days, singing traditional awakening melodies so the seedlings sprout healthy and golden.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <h4 class="feature-title">Jhumur Songs & Dance</h4>
+          <p class="feature-text">Women and men join hands in curving lines, swaying to the resonant, thundering beats of the clay Mandar drum and the sweet melodies of bamboo flutes under the full moon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-image-stack">
+        <img class="about-img-main" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80" alt="Jhumur dance performance" />
+        <div class="about-badge-card">
+          <div class="about-badge-title">Centuries of Harmony</div>
+          <div class="about-badge-sub">Preserved by Assam's Tea Tribes</div>
+        </div>
+      </div>
+
+      <div class="about-text-content">
+        <div class="section-eyebrow">Heritage & Folklore</div>
+        <h3>The Timeless Tale of Karma and Dharma</h3>
+        <p>
+          At the philosophical heart of Karam Utsav is the legendary story of two brothers, Karma and Dharma. The elder brother, Karma, was hardworking and devoted to his agriculture and elders, while Dharma learned through hardship the paramount importance of respecting nature and traditional duties.
+        </p>
+        <p>
+          Today in Assam, the festival stands as a symbol of unity, mutual cooperation, and ecological harmony, celebrated across thousands of tea gardens, towns, and villages with deep cultural pride.
+        </p>
+
+        <ul class="about-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Celebrated in the lunar month of Bhado (August–September)</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Preserved orally through Karam Katha folk story recitals</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Promotes environmental protection and community bonding</span>
+          </li>
+        </ul>
+
+        <button class="btn-primary" onclick="openComingSoonModal('Full Karam Katha Folklore Archives')">
+          <span>Read Full Folklore</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rituals Timeline -->
+  <section class="rituals-section" id="rituals">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Ceremonial Phases</div>
+        <h3 class="section-title">Sacred Flow of Karam Puja</h3>
+        <p class="section-desc">A structured progression of communal devotion and agricultural worship.</p>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="step-number">01</div>
+          <h4 class="timeline-title">Jawa Jagaran</h4>
+          <p class="timeline-text">7 to 9 days before the puja, girls place grain seeds in decorated bamboo baskets with river sand, singing Tusu and Karam songs each evening.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="step-number">02</div>
+          <h4 class="timeline-title">Daal Katna</h4>
+          <p class="timeline-text">Young men fast and proceed in a procession to the forest grove with drums, reverently cutting two sacred branches of the Karam tree.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="step-number">03</div>
+          <h4 class="timeline-title">Akhra Sthapana</h4>
+          <p class="timeline-text">The Karam branches are ceremonially planted in the center of the village courtyard (Akhra), consecrated with vermilion, milk, and flowers by the elder priest (Pahan).</p>
+        </div>
+        <div class="timeline-card">
+          <div class="step-number">04</div>
+          <h4 class="timeline-title">Visarjan & Feast</h4>
+          <p class="timeline-text">After a night of Jhumur dancing, the branches are respectfully carried at dawn and immersed in the local river with prayers for harvest prosperity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cultural Gallery -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Visual Heritage</div>
+        <h3 class="section-title">Glimpses of Karam Utsav</h3>
+        <p class="section-desc">Explore photographs capturing the colors, dance, music, and sacred moments of the festival.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="filter-btn active" onclick="filterGallery('All', this)">All</button>
+        <button class="filter-btn" onclick="filterGallery('Karam Puja', this)">Karam Puja</button>
+        <button class="filter-btn" onclick="filterGallery('Traditional Dance', this)">Traditional Dance</button>
+        <button class="filter-btn" onclick="filterGallery('Traditional Music', this)">Traditional Music</button>
+        <button class="filter-btn" onclick="filterGallery('Cultural Events', this)">Cultural Events</button>
+        <button class="filter-btn" onclick="filterGallery('Nature & Karam Tree', this)">Nature & Karam Tree</button>
+        <button class="filter-btn" onclick="filterGallery('Tea Garden Culture', this)">Tea Garden Culture</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Cultural Ebook Showcase -->
+  <section class="ebook-section" id="ebook">
+    <div class="container ebook-grid">
+      <div class="ebook-cover-wrapper">
+        <div class="ebook-book-visual">
+          <div class="badge" style="background:#153225; color:#a7f3d0; border-color:#2d6a4f;">Official Edition 2026</div>
+          <h4 class="book-title-assamese">কৰম পৰৱ</h4>
+          <div class="book-title-sub">Karam Utsav Heritage</div>
+          <div class="book-emblem">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="book-footer-note">Illustrated Cultural Monograph • Assam</div>
+        </div>
+      </div>
+
+      <div class="ebook-details">
+        <div class="badge" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border-color: #f59e0b;">
+          Digital Heritage Publication
+        </div>
+        <h3>কৰম পৰৱ (Karam Parav)</h3>
+        <p class="ebook-subtitle">Explore Karam Utsav, Its Traditions and Cultural Heritage in Assam</p>
+        <p class="ebook-desc">
+          An authoritative introductory cultural ebook exploring the folklore, folk beliefs, agrarian rituals, folk songs, and collective participation of the tea tribes and indigenous communities of Assam.
+        </p>
+
+        <div class="ebook-meta-table">
+          <div class="meta-row">
+            <span class="meta-label">Language</span>
+            <span class="meta-val">Assamese & English Notes</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Format</span>
+            <span class="meta-val">High-Definition Digital PDF</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Length</span>
+            <span class="meta-val">64 Pages with Color Photos</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Publisher</span>
+            <span class="meta-val">Karam Utsav Documentation Wing</span>
+          </div>
+        </div>
+
+        <div class="pricing-box">
+          <span class="price-main">₹49</span>
+          <span class="price-mrp">₹249</span>
+          <span class="discount-pill">80% OFF Community Price</span>
+        </div>
+
+        <div class="ebook-actions">
+          <button class="btn-buy-amazon" onclick="openPaymentModal()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span>Get Instant Copy (₹49)</span>
+          </button>
+          <button class="btn-preview-book" onclick="openReaderModal()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span>Read Sample Chapter</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info-card">
+        <div class="section-eyebrow">Connect with Us</div>
+        <h3 class="contact-org-title">Karam Utsav Cultural & Heritage Documentation Committee</h3>
+        <p class="contact-org-sub">Dedicated to preserving and promoting the living cultural heritage of Karam Utsav in Assam.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Heritage Office</div>
+            <div class="contact-val">Missa Town, Nagaon, Assam – 782138</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Phone Numbers</div>
+            <div class="contact-val">
+              <a href="tel:7638010004">+91 7638010004</a> • <a href="tel:9707848936">9707848936</a> • <a href="tel:7086495850">7086495850</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Official Email</div>
+            <div class="contact-val">
+              <a href="mailto:karamutsav@gmail.com">karamutsav@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h4 style="font-family: var(--font-display); font-size: 1.4rem; color: #19241e; margin-bottom: 1rem;">Send Cultural Inquiry or Documentation Note</h4>
+        <form onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Sankar Jhora" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone or Email</label>
+            <input type="text" class="form-input" placeholder="e.g. 7638010004 or sankar@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject / Purpose</label>
+            <input type="text" class="form-input" placeholder="Festival Documentation / Ebook Support" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Message</label>
+            <textarea class="form-textarea" rows="4" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            Send Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 style="font-size: 1.4rem; color: #fef3c7;">Karam Utsav</h4>
+          <p style="font-size: 0.95rem; color: #9ca3af; margin-bottom: 1.25rem; line-height: 1.6;">
+            “Preserving culture means keeping our roots alive for future generations.” Dedicated to the living heritage of Assam's tea tribes and nature worship traditions.
+          </p>
+          <div class="social-row">
+            <a href="https://wa.me/917638010004" target="_blank" rel="noopener noreferrer" class="social-btn" title="WhatsApp">WA</a>
+            <a href="https://facebook.com/karamutsav" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook">FB</a>
+            <a href="https://instagram.com/karamutsav" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram">IG</a>
+            <a href="https://youtube.com/@karamutsav" target="_blank" rel="noopener noreferrer" class="social-btn" title="YouTube">YT</a>
+            <a href="https://x.com/karamutsav" target="_blank" rel="noopener noreferrer" class="social-btn" title="X (Twitter)">X</a>
+            <a href="https://t.me/karamutsav" target="_blank" rel="noopener noreferrer" class="social-btn" title="Telegram">TG</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Karam Puja</a></li>
+            <li><a href="#rituals">Sacred Rituals</a></li>
+            <li><a href="#gallery">Photo Gallery</a></li>
+            <li><a href="#ebook">Cultural Ebook</a></li>
+            <li><a href="#contact">Contact Committee</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Traditions</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Karma & Dharma Katha</a></li>
+            <li><a href="#rituals">Jawa Jagaran</a></li>
+            <li><a href="#gallery">Jhumur Folk Dance</a></li>
+            <li><a href="#rituals">Karam Tree Veneration</a></li>
+            <li><a href="#contact">Assam Tea Tribes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Help</h4>
+          <ul class="footer-links">
+            <li><a href="tel:7638010004">+91 7638010004</a></li>
+            <li><a href="mailto:karamutsav@gmail.com">karamutsav@gmail.com</a></li>
+            <li><a href="#contact">Missa, Nagaon, Assam</a></li>
+            <li><a href="javascript:void(0)" onclick="openComingSoonModal('Legal Policies')">Terms & Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Karam Utsav. All Rights Reserved. Presented with pride for Assam’s cultural heritage.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: Sample Ebook Reader Modal -->
+  <div class="modal-overlay" id="readerModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('readerModal')">✕</button>
+      <div class="modal-header">
+        <h3>কৰম পৰৱ — Sample Chapter Reading</h3>
+      </div>
+      <div class="modal-body">
+        <div style="background: #faf7f2; border: 1px solid #ede8df; padding: 1.25rem; border-radius: 0.5rem; margin-bottom: 1.25rem;">
+          <h4 style="font-family: var(--font-display); color: #2d6a4f; margin-bottom: 0.5rem;">অধ্যায় ১: কৰম পূজাৰ সাংস্কৃতিক তাৎপৰ্য</h4>
+          <p style="font-size: 0.95rem; color: #374151; line-height: 1.7; margin-bottom: 0.75rem;">
+            অসমৰ চাহ জনগোষ্ঠী তথা আদিবাসী সমাজৰ প্ৰাণৰ উৎসৱ কৰম পৰৱ। প্ৰকৃতি, কৃষি আৰু সামাজিক ভাতৃত্ববোধৰ এক উজ্জ্বল প্ৰতীক হিচাপে প্ৰতি বছৰে ভাদ মাহৰ শুক্লা একাদশী তিথিত এই পৱিত্ৰ পূজা অনুষ্ঠিত হয়।
+          </p>
+          <p style="font-size: 0.95rem; color: #374151; line-height: 1.7;">
+            কৰম গছৰ পৱিত্ৰ ডাল সংগ্ৰহ কৰি আখৰাত স্থাপন কৰা, জাগৰণ গীত গাই কুমাৰী ছোৱালীসকলে জাওয়া জগোৱা, আৰু মাদলৰ তালে তালে ঝুমুৰ নৃত্য কৰাটো এই উৎসৱৰ মূল বৈশিষ্ট্য।
+          </p>
+        </div>
+
+        <h4 style="font-family: var(--font-display); color: #19241e; margin-bottom: 0.5rem;">Chapter 1: English Summary</h4>
+        <p style="font-size: 0.95rem; color: #4b5563; line-height: 1.6;">
+          Karam Utsav is the crowning agrarian festival honoring ecological harmony. The ritual represents the symbiotic balance between human toil and nature's gifts, passing down ancient wisdom across generations.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('readerModal')">Close Sample</button>
+        <button class="btn-primary" onclick="closeModal('readerModal'); openPaymentModal();">Get Full 64-Page Edition (₹49)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Ebook Payment / Download Modal -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('paymentModal')">✕</button>
+      <div class="modal-header">
+        <h3>Official Digital Ebook Access</h3>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 1.25rem; align-items: center; margin-bottom: 1.5rem;">
+          <div style="width: 70px; height: 100px; background: #2d6a4f; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fef3c7; font-weight: 700; font-size: 0.8rem; text-align: center; padding: 0.5rem;">
+            কৰম পৰৱ PDF
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; color: #19241e; font-weight: 700;">কৰম পৰৱ (Karam Parav 2026)</h4>
+            <p style="font-size: 0.85rem; color: #6b7280;">Collector's Color Edition • Instant PDF</p>
+            <div style="font-weight: 700; color: #d97706; font-size: 1.25rem; margin-top: 0.25rem;">₹49 <span style="font-size: 0.85rem; text-decoration: line-through; color: #9ca3af;">₹249</span></div>
+          </div>
+        </div>
+
+        <form onsubmit="handlePaymentSubmit(event)">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" id="buyerName" placeholder="Full Name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address (for PDF delivery)</label>
+            <input type="email" class="form-input" id="buyerEmail" placeholder="yourname@gmail.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">WhatsApp Number</label>
+            <input type="tel" class="form-input" id="buyerPhone" placeholder="10-digit mobile number" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Payment Method</label>
+            <select class="form-input">
+              <option>UPI / Google Pay / PhonePe / Paytm (Instant)</option>
+              <option>Debit / Credit Card</option>
+              <option>Net Banking</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.9rem;">
+            Proceed to Secure Payment (₹49)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: Gallery Lightbox Modal -->
+  <div class="modal-overlay" id="lightboxModal" onclick="closeLightboxOnBackdrop(event)">
+    <div class="modal-box lightbox-box">
+      <button class="modal-close" onclick="closeModal('lightboxModal')">✕</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Cultural photo viewer" />
+      </div>
+      <div class="lightbox-caption-wrap">
+        <h3 id="lightboxTitle" style="font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 0.4rem;"></h3>
+        <p id="lightboxCaption" style="color: #d1d5db; font-size: 0.95rem; margin-bottom: 0.75rem;"></p>
+        <div id="lightboxMeta" style="color: #9ca3af; font-size: 0.8rem;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: Generic Coming Soon Modal -->
+  <div class="modal-overlay" id="comingSoonModal">
+    <div class="modal-box" style="max-width: 480px; text-align: center;">
+      <button class="modal-close" onclick="closeModal('comingSoonModal')">✕</button>
+      <div class="modal-body" style="padding: 2.5rem 2rem;">
+        <div style="width: 4rem; height: 4rem; background: #fef3c7; color: #b45309; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 id="comingSoonTitle" style="font-family: var(--font-display); font-size: 1.5rem; color: #19241e; margin-bottom: 0.5rem;">Coming Soon</h3>
+        <p id="comingSoonText" style="color: #4b5563; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+          We are preparing this cultural archive section with verified historical documentation and community recordings. Please check back soon.
+        </p>
+        <button class="btn-primary" style="margin: 0 auto;" onclick="closeModal('comingSoonModal')">Got It, Thank You</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript (Single-File Native Script) -->
+  <script>
+    // Gallery Data
+    const galleryItems = [
+      {
+        id: 'gal-1',
+        title: 'Sacred Karam Tree Branches (Daal Katna)',
+        category: 'Nature & Karam Tree',
+        imageUrl: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1000&q=80',
+        caption: 'Ceremonial collection of sacred Karam branches from the forest grove with traditional rites and offerings.',
+        location: 'Kaliabor Grove, Nagaon, Assam',
+        photographer: 'Cultural Field Archive'
+      },
+      {
+        id: 'gal-2',
+        title: 'Jhumur Dance Celebration in Tea Gardens',
+        category: 'Traditional Dance',
+        imageUrl: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80',
+        caption: 'Women performing the traditional rhythmic Jhumur dance interlocking arms around the festival Akhra.',
+        location: 'Missa Tea Estate, Nagaon, Assam',
+        photographer: 'Community Archive'
+      },
+      {
+        id: 'gal-3',
+        title: 'Mandar and Dhol Rhythm Keepers',
+        category: 'Traditional Music',
+        imageUrl: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1000&q=80',
+        caption: 'Folk drummers beating the sacred clay Mandar and metallic Nagara drums that define the tempo of Karam songs.',
+        location: 'Upper Assam Heritage Circle',
+        photographer: 'Folk Documentation Wing'
+      },
+      {
+        id: 'gal-4',
+        title: 'Jawa Germination & Sprouted Grains Ritual',
+        category: 'Karam Puja',
+        imageUrl: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1000&q=80',
+        caption: 'Maidens (Karamthin) tending the sacred Jawa seedlings symbolizing fertility and agricultural blessings.',
+        location: 'Tea Community Village, Nagaon',
+        photographer: 'Field Researcher'
+      },
+      {
+        id: 'gal-5',
+        title: 'Evening Community Akhra Gathering',
+        category: 'Cultural Events',
+        imageUrl: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80',
+        caption: 'Villagers of all generations gathered around the central Akhra ground for nocturnal song recitals and stories.',
+        location: 'Missa Town Cultural Ground, Assam',
+        photographer: 'Heritage Volunteer'
+      },
+      {
+        id: 'gal-6',
+        title: 'Tea Garden Landscape & Living Roots',
+        category: 'Tea Garden Culture',
+        imageUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80',
+        caption: 'Lush green tea estate rows where generations of families have nurtured vibrant cultural traditions.',
+        location: 'Brahmaputra Valley, Assam',
+        photographer: 'Assam Landscape Documentation'
+      }
+    ];
+
+    // Render Gallery Items
+    function renderGallery(filterCategory = 'All') {
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) return;
+
+      const filtered = filterCategory === 'All'
+        ? galleryItems
+        : galleryItems.filter(item => item.category === filterCategory);
+
+      grid.innerHTML = filtered.map(item => `
+        <article class="gallery-item" onclick="openLightbox('${item.id}')">
+          <div class="gallery-thumb">
+            <img src="${item.imageUrl}" alt="${item.title}" loading="lazy" />
+            <span class="gallery-tag">${item.category}</span>
+          </div>
+          <div class="gallery-info">
+            <h4 class="gallery-title">${item.title}</h4>
+            <p class="gallery-caption">${item.caption}</p>
+            <div class="gallery-meta">📍 ${item.location || 'Assam'}</div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Filter Gallery Buttons
+    function filterGallery(category, buttonElement) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      if (buttonElement) {
+        buttonElement.classList.add('active');
+      }
+      renderGallery(category);
+    }
+
+    // Lightbox Modal
+    function openLightbox(itemId) {
+      const item = galleryItems.find(g => g.id === itemId);
+      if (!item) return;
+
+      document.getElementById('lightboxImg').src = item.imageUrl;
+      document.getElementById('lightboxTitle').textContent = item.title;
+      document.getElementById('lightboxCaption').textContent = item.caption;
+      document.getElementById('lightboxMeta').textContent = `Location: ${item.location || 'Assam'} • Photo: ${item.photographer || 'Cultural Archive'}`;
+      
+      openModal('lightboxModal');
+    }
+
+    function closeLightboxOnBackdrop(event) {
+      if (event.target.id === 'lightboxModal') {
+        closeModal('lightboxModal');
+      }
+    }
+
+    // Generic Modal Open/Close
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Shortcuts for specific modals
+    function openReaderModal() {
+      openModal('readerModal');
+    }
+
+    function openEbookModal() {
+      openModal('paymentModal');
+    }
+
+    function openPaymentModal() {
+      openModal('paymentModal');
+    }
+
+    function openComingSoonModal(featureName) {
+      document.getElementById('comingSoonTitle').textContent = featureName ? featureName : 'Coming Soon';
+      openModal('comingSoonModal');
+    }
+
+    // Mobile Navigation Toggle
+    function toggleMobileNav() {
+      const links = document.getElementById('navLinks');
+      if (links) {
+        links.classList.toggle('mobile-open');
+      }
+    }
+
+    // Smooth Navigation Highlight
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id');
+        const navLink = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+          if (navLink) navLink.classList.add('active');
+        }
+      });
+    });
+
+    // Handle Contact Form Submission
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      alert('Thank you! Your message has been sent to the Karam Utsav Cultural & Heritage Documentation Committee.');
+      event.target.reset();
+    }
+
+    // Handle Payment / Ebook Download Submission
+    function handlePaymentSubmit(event) {
+      event.preventDefault();
+      const buyerName = document.getElementById('buyerName').value;
+      const buyerEmail = document.getElementById('buyerEmail').value;
+      
+      closeModal('paymentModal');
+      alert(`Thank you ${buyerName}! Your order for "কৰম পৰৱ" (₹49) has been confirmed. A download link has been sent to ${buyerEmail}. You can also contact +91 7638010004 on WhatsApp for instant assistance.`);
+      event.target.reset();
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGallery('All');
+    });
+  </script>
+</body>
+</html>
